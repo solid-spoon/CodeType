@@ -1,0 +1,15 @@
+{
+  "id": "perl",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "use strict;\nuse warnings;\n\nsub fib {\n    my $n = shift;\n    return $n if $n < 2;\n    return fib($n - 1) + fib($n - 2);\n}\n\nprint fib(10), \"\\n\";"
+    },
+    {
+      "id": "map-double",
+      "tags": ["arrays"],
+      "code": "my @nums = (1, 2, 3, 4, 5);\nmy @doubled = map { $_ * 2 } @nums;\nprint join(\", \", @doubled), \"\\n\";"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "lua",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "function fibonacci(n)\n  if n < 2 then return n end\n  return fibonacci(n - 1) + fibonacci(n - 2)\nend\n\nfor i = 1, 10 do\n  print(i, fibonacci(i))\nend"
+    },
+    {
+      "id": "map-fn",
+      "tags": ["functional"],
+      "code": "local function map(t, fn)\n  local out = {}\n  for i, v in ipairs(t) do\n    out[i] = fn(v)\n  end\n  return out\nend\n\nlocal nums = {1, 2, 3, 4, 5}\nlocal doubled = map(nums, function(x) return x * 2 end)\nprint(table.concat(doubled, \", \"))"
+    }
+  ]
+}

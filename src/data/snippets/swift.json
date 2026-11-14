@@ -1,0 +1,15 @@
+{
+  "id": "swift",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "func fibonacci(_ n: Int) -> Int {\n    if n < 2 { return n }\n    return fibonacci(n - 1) + fibonacci(n - 2)\n}\n\nprint(fibonacci(10))"
+    },
+    {
+      "id": "map-double",
+      "tags": ["collections"],
+      "code": "let numbers = [1, 2, 3, 4, 5]\nlet doubled = numbers.map { $0 * 2 }\nprint(doubled)"
+    }
+  ]
+}

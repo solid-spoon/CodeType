@@ -1,0 +1,15 @@
+{
+  "id": "julia",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "function fibonacci(n::Int)\n    if n < 2\n        return n\n    end\n    return fibonacci(n - 1) + fibonacci(n - 2)\nend\n\nprintln(fibonacci(10))"
+    },
+    {
+      "id": "comp",
+      "tags": ["comprehension"],
+      "code": "nums = [1, 2, 3, 4, 5]\nsquared = [x^2 for x in nums if x > 2]\nprintln(squared)"
+    }
+  ]
+}

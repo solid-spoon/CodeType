@@ -1,0 +1,15 @@
+{
+  "id": "dart",
+  "snippets": [
+    {
+      "id": "map-double",
+      "tags": ["collections"],
+      "code": "void main() {\n  final nums = [1, 2, 3, 4, 5];\n  final doubled = nums.map((n) => n * 2).toList();\n  print(doubled);\n}"
+    },
+    {
+      "id": "counter-class",
+      "tags": ["oop"],
+      "code": "class Counter {\n  int _count = 0;\n\n  void increment() => _count++;\n  int get value => _count;\n}"
+    }
+  ]
+}

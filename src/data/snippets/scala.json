@@ -1,0 +1,15 @@
+{
+  "id": "scala",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "object Main extends App {\n  def fib(n: Int): Int =\n    if (n < 2) n else fib(n - 1) + fib(n - 2)\n\n  (1 to 10).map(fib).foreach(println)\n}"
+    },
+    {
+      "id": "list-filter",
+      "tags": ["collections"],
+      "code": "val numbers = List(1, 2, 3, 4, 5)\nval evens = numbers.filter(_ % 2 == 0).map(_ * 10)\nprintln(evens)"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "javascript",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "function fibonacci(n) {\n  if (n <= 1) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\nconsole.log(fibonacci(10));"
+    },
+    {
+      "id": "reduce",
+      "tags": ["array"],
+      "code": "const sum = (a, b) => a + b;\nconst numbers = [1, 2, 3, 4, 5];\nconst total = numbers.reduce(sum, 0);\nconsole.log(total); // 15"
+    },
+    {
+      "id": "debounce",
+      "tags": ["closure"],
+      "code": "function debounce(fn, delay) {\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n}"
+    },
+    {
+      "id": "map",
+      "tags": ["array"],
+      "code": "const users = [\n  { name: 'Alice', age: 30 },\n  { name: 'Bob',   age: 25 },\n];\nconst names = users.map(u => u.name);\nconsole.log(names.join(', '));"
+    },
+    {
+      "id": "fetch",
+      "tags": ["async"],
+      "code": "async function fetchData(url) {\n  const res = await fetch(url);\n  return res.json();\n}"
+    },
+    {
+      "id": "class",
+      "tags": ["oop"],
+      "code": "class Animal {\n  constructor(name) {\n    this.name = name;\n  }\n  speak() {\n    return `${this.name} makes a sound`;\n  }\n}"
+    },
+    {
+      "id": "memoize",
+      "tags": ["closure"],
+      "code": "const memoize = fn => {\n  const cache = new Map();\n  return (...args) => {\n    const key = JSON.stringify(args);\n    if (!cache.has(key)) cache.set(key, fn(...args));\n    return cache.get(key);\n  };\n};"
+    }
+  ]
+}

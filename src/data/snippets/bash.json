@@ -1,0 +1,15 @@
+{
+  "id": "bash",
+  "snippets": [
+    {
+      "id": "process-files",
+      "tags": ["loops"],
+      "code": "#!/usr/bin/env bash\nset -euo pipefail\n\nfor file in *.txt; do\n    echo \"Processing $file\"\n    wc -l \"$file\"\ndone"
+    },
+    {
+      "id": "array-loop",
+      "tags": ["arrays"],
+      "code": "#!/bin/bash\nfiles=(\"a.txt\" \"b.txt\" \"c.txt\")\nfor f in \"${files[@]}\"; do\n    echo \"-> $f\"\ndone"
+    }
+  ]
+}

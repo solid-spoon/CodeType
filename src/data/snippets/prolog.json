@@ -1,0 +1,10 @@
+{
+  "id": "prolog",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "fib(0, 0).\nfib(1, 1).\nfib(N, F) :-\n    N > 1,\n    N1 is N - 1, N2 is N - 2,\n    fib(N1, F1), fib(N2, F2),\n    F is F1 + F2."
+    }
+  ]
+}

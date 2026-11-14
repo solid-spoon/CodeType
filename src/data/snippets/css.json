@@ -1,0 +1,15 @@
+{
+  "id": "css",
+  "snippets": [
+    {
+      "id": "button",
+      "tags": ["styles"],
+      "code": ".button {\n  display: inline-block;\n  padding: 0.5rem 1rem;\n  background: #3b82f6;\n  color: white;\n  border-radius: 0.375rem;\n  transition: background 0.2s;\n}\n\n.button:hover {\n  background: #2563eb;\n}"
+    },
+    {
+      "id": "media-query",
+      "tags": ["responsive"],
+      "code": "@media (max-width: 768px) {\n  .container {\n    flex-direction: column;\n    gap: 1rem;\n  }\n}"
+    }
+  ]
+}

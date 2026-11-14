@@ -1,0 +1,15 @@
+{
+  "id": "csharp",
+  "snippets": [
+    {
+      "id": "linq-evens",
+      "tags": ["linq"],
+      "code": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5 };\n        var evens = nums.Where(n => n % 2 == 0).ToList();\n        Console.WriteLine(string.Join(\", \", evens));\n    }\n}"
+    },
+    {
+      "id": "fetch-async",
+      "tags": ["async"],
+      "code": "public async Task<string> FetchAsync(string url) {\n    using var client = new HttpClient();\n    return await client.GetStringAsync(url);\n}"
+    }
+  ]
+}

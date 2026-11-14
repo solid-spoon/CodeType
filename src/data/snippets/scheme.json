@@ -1,0 +1,10 @@
+{
+  "id": "scheme",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "(define (fib n)\n  (if (< n 2)\n      n\n      (+ (fib (- n 1)) (fib (- n 2)))))\n\n(display (fib 10))"
+    }
+  ]
+}

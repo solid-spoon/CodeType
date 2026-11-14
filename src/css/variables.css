@@ -1,0 +1,21 @@
+:root {
+  --bg: #0e0e0e;
+  --bg-alt: #181818;
+  --bg-alt2: #1f1f1f;
+  --text: #e6e6e6;
+  --dim: #4a4a4a;
+  --dim2: #2a2a2a;
+  --border: #2a2a2a;
+  --accent: #e2b714;
+  --error: #ff5e5e;
+  --error-bg: rgba(255, 94, 94, 0.15);
+  --correct: #e6e6e6;
+
+  --green: #7ee787;
+  --red: #ff5e5e;
+  --text-3: #6a6a6a;
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --transition: 0.15s ease;
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeType — code typing</title>
+    <script>
+      try {
+        if (!localStorage.getItem("codetype_user"))
+          location.replace("login.html");
+        else localStorage.setItem("codetype_last_page", "trainer.html");
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/trainer.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23181818'/><text x='32' y='50' font-family='monospace' font-size='54' font-weight='bold' fill='%23e2b714' text-anchor='middle' dominant-baseline='central'>c</text><text x='68' y='50' font-family='monospace' font-size='54' font-weight='bold' fill='%23e6e6e6' text-anchor='middle' dominant-baseline='central'>t</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <codetype-header></codetype-header>
+
+      <div class="toolbar">
+        <div class="toolbar-lang">
+          <select id="lang"></select>
+          <span id="actual-lang" class="actual-lang"></span>
+        </div>
+        <button class="btn btn-ghost" id="restart" title="Esc">
+          ↻ restart
+        </button>
+      </div>
+
+      <div id="text" class="text" tabindex="0"></div>
+
+      <div class="shortcuts">
+        <kbd>Tab</kbd> indent · <kbd>Shift+Tab</kbd> leave · <kbd>⌫</kbd> delete
+        · <kbd>Enter</kbd> newline · <kbd>Esc</kbd> restart
+      </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="big-stats">
+          <div>
+            <span class="big-label">wpm</span
+            ><span id="r-wpm" class="big-value">0</span>
+          </div>
+          <div>
+            <span class="big-label">accuracy</span
+            ><span id="r-acc" class="big-value">0%</span>
+          </div>
+          <div>
+            <span class="big-label">time</span
+            ><span id="r-time" class="big-value">0s</span>
+          </div>
+        </div>
+        <div class="save-row">
+          <button class="btn btn-primary" id="save">save result</button>
+          <button class="btn btn-ghost" id="again">again</button>
+        </div>
+        <div class="shortcuts" style="margin-top: 18px">
+          <kbd>Enter</kbd> save · <kbd>Esc</kbd> skip
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="js/pages/trainer.js"></script>
+  </body>
+</html>

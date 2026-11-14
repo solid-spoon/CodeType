@@ -1,0 +1,146 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.toolbar-lang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbar select {
+  width: auto;
+  padding: 9px 14px;
+  font-size: 13px;
+}
+
+.actual-lang {
+  font-size: 11px;
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.text {
+  padding: 20px 0;
+  font-size: 22px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  min-height: 220px;
+  user-select: none;
+  cursor: text;
+  outline: none;
+  width: 100%;
+}
+
+.char {
+  transition:
+    color 0.05s,
+    background 0.05s;
+  border-radius: 2px;
+}
+
+.char.pending {
+  color: var(--dim);
+}
+
+.char.correct {
+  color: var(--correct);
+}
+
+.char.incorrect {
+  color: var(--error);
+  background: var(--error-bg);
+  text-decoration: underline wavy var(--error);
+  text-underline-offset: 3px;
+}
+
+.char.current {
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 2px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.shortcuts {
+  font-size: 11px;
+  color: var(--dim);
+  text-align: center;
+  margin-top: 24px;
+  letter-spacing: 0.2px;
+  line-height: 1.9;
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 6px;
+  border: 1px solid var(--dim2);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  font-size: 10px;
+  background: var(--bg-alt2);
+  margin: 0 1px;
+}
+
+.big-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.big-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--dim);
+  margin-bottom: 8px;
+}
+
+.big-value {
+  display: block;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.save-row {
+  display: flex;
+  gap: 10px;
+}
+
+.save-row .btn {
+  flex: 1;
+}

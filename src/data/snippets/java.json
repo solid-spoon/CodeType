@@ -1,0 +1,15 @@
+{
+  "id": "java",
+  "snippets": [
+    {
+      "id": "hello-loop",
+      "tags": ["basics"],
+      "code": "public class Hello {\n    public static void main(String[] args) {\n        for (int i = 0; i < 5; i++) {\n            System.out.println(\"i = \" + i);\n        }\n    }\n}"
+    },
+    {
+      "id": "stream-squares",
+      "tags": ["streams"],
+      "code": "import java.util.*;\nimport java.util.stream.*;\n\nList<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);\nList<Integer> squares = nums.stream()\n    .map(n -> n * n)\n    .collect(Collectors.toList());"
+    }
+  ]
+}

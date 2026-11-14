@@ -1,0 +1,15 @@
+{
+  "id": "clojure",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "(defn fib [n]\n  (if (< n 2)\n    n\n    (+ (fib (- n 1)) (fib (- n 2)))))\n\n(println (fib 10))"
+    },
+    {
+      "id": "thread-last",
+      "tags": ["collections"],
+      "code": "(->> (range 1 11)\n     (map #(* % %))\n     (filter even?)\n     (reduce +)\n     (println))"
+    }
+  ]
+}

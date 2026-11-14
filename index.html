@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23181818'/><text x='32' y='50' font-family='monospace' font-size='54' font-weight='bold' fill='%23e2b714' text-anchor='middle' dominant-baseline='central'>c</text><text x='68' y='50' font-family='monospace' font-size='54' font-weight='bold' fill='%23e6e6e6' text-anchor='middle' dominant-baseline='central'>t</text></svg>"
+    />
+    <title>CodeType</title>
+    <script>
+      (function () {
+        var U = "codetype_user",
+          L = "codetype_last_page",
+          SRC = "src/";
+        var ALLOWED = ["trainer.html", "profile.html"];
+        var user = null,
+          last = null;
+        try {
+          user = localStorage.getItem(U);
+          last = localStorage.getItem(L);
+        } catch (e) {}
+        if (!user) {
+          location.replace(SRC + "login.html");
+          return;
+        }
+        if (!last || ALLOWED.indexOf(last) < 0) last = "trainer.html";
+        location.replace(SRC + last);
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript
+      >JavaScript is required to run CodeType. Please enable it.</noscript
+    >
+    loading…
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "id": "asm",
+  "snippets": [
+    {
+      "id": "hello-world",
+      "tags": ["syscalls"],
+      "code": "section .data\n    msg db \"Hello, World!\", 0x0A\n    len equ $ - msg\n\nsection .text\n    global _start\n\n_start:\n    mov rax, 1          ; write syscall\n    mov rdi, 1          ; stdout\n    mov rsi, msg\n    mov rdx, len\n    syscall\n\n    mov rax, 60         ; exit syscall\n    xor rdi, rdi\n    syscall"
+    },
+    {
+      "id": "loop-counter",
+      "tags": ["loops"],
+      "code": "section .text\n    global _start\n\n_start:\n    mov rcx, 5          ; counter\n    xor rbx, rbx\n\n.loop:\n    inc rbx\n    loop .loop\n\n    mov rax, 60\n    mov rdi, rbx\n    syscall"
+    }
+  ]
+}

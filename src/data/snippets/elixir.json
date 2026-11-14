@@ -1,0 +1,15 @@
+{
+  "id": "elixir",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "defmodule Fib do\n  def fib(0), do: 0\n  def fib(1), do: 1\n  def fib(n), do: fib(n - 1) + fib(n - 2)\nend\n\nIO.puts Fib.fib(10)"
+    },
+    {
+      "id": "pipe-chain",
+      "tags": ["pipes"],
+      "code": "[1, 2, 3, 4, 5]\n|> Enum.map(&(&1 * 2))\n|> Enum.filter(&(&1 > 4))\n|> IO.inspect()"
+    }
+  ]
+}

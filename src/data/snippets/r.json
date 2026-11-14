@@ -1,0 +1,15 @@
+{
+  "id": "r",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "fib <- function(n) {\n  if (n < 2) return(n)\n  fib(n - 1) + fib(n - 2)\n}\n\nprint(fib(10))"
+    },
+    {
+      "id": "sapply-squares",
+      "tags": ["apply"],
+      "code": "nums <- c(1, 2, 3, 4, 5)\nsquares <- sapply(nums, function(x) x^2)\nprint(squares)"
+    }
+  ]
+}

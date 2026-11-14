@@ -1,0 +1,15 @@
+{
+  "id": "html",
+  "snippets": [
+    {
+      "id": "basic-doc",
+      "tags": ["document"],
+      "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Hello</title>\n</head>\n<body>\n  <h1>Hello, world!</h1>\n</body>\n</html>"
+    },
+    {
+      "id": "form",
+      "tags": ["form"],
+      "code": "<form action=\"/submit\" method=\"post\">\n  <label for=\"name\">Name</label>\n  <input id=\"name\" type=\"text\" name=\"name\" required>\n  <button type=\"submit\">Send</button>\n</form>"
+    }
+  ]
+}

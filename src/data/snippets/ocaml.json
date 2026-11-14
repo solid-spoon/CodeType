@@ -1,0 +1,15 @@
+{
+  "id": "ocaml",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "let rec fib n =\n  if n < 2 then n\n  else fib (n - 1) + fib (n - 2)\n\nlet () = print_int (fib 10)"
+    },
+    {
+      "id": "map-fn",
+      "tags": ["list"],
+      "code": "let rec map f = function\n  | []   -> []\n  | h::t -> f h :: map f t\n\nlet () =\n  List.iter print_int (map (fun x -> x * 2) [1; 2; 3; 4; 5])"
+    }
+  ]
+}

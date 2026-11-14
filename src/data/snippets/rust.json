@@ -1,0 +1,15 @@
+{
+  "id": "rust",
+  "snippets": [
+    {
+      "id": "vec-sum",
+      "tags": ["iterators"],
+      "code": "fn main() {\n    let v = vec![1, 2, 3, 4, 5];\n    let sum: i32 = v.iter().sum();\n    println!(\"sum = {}\", sum);\n}"
+    },
+    {
+      "id": "word-count",
+      "tags": ["hashmap"],
+      "code": "use std::collections::HashMap;\n\nfn count_words(text: &str) -> HashMap<&str, usize> {\n    let mut map = HashMap::new();\n    for w in text.split_whitespace() {\n        *map.entry(w).or_insert(0) += 1;\n    }\n    map\n}"
+    }
+  ]
+}

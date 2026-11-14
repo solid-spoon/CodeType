@@ -1,0 +1,15 @@
+{
+  "id": "kotlin",
+  "snippets": [
+    {
+      "id": "filter-evens",
+      "tags": ["collections"],
+      "code": "fun main() {\n    val nums = listOf(1, 2, 3, 4, 5)\n    val evens = nums.filter { it % 2 == 0 }\n    println(evens)\n}"
+    },
+    {
+      "id": "data-class",
+      "tags": ["oop"],
+      "code": "data class User(val name: String, val age: Int)\n\nfun greet(user: User) = \"Hello, \" + user.name + \"!\"\n\nfun main() {\n    val users = listOf(User(\"Alice\", 30), User(\"Bob\", 25))\n    users.filter { it.age > 26 }.forEach { println(greet(it)) }\n}"
+    }
+  ]
+}

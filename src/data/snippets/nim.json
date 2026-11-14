@@ -1,0 +1,15 @@
+{
+  "id": "nim",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "proc fibonacci(n: int): int =\n  if n < 2: return n\n  fibonacci(n - 1) + fibonacci(n - 2)\n\nfor i in 0..10:\n  echo fibonacci(i)"
+    },
+    {
+      "id": "map-double",
+      "tags": ["collections"],
+      "code": "let nums = @[1, 2, 3, 4, 5]\nlet doubled = nums.mapIt(it * 2)\necho doubled"
+    }
+  ]
+}

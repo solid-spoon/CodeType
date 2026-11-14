@@ -1,0 +1,20 @@
+{
+  "id": "haskell",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "fibonacci :: Int -> Int\nfibonacci n\n  | n < 2     = n\n  | otherwise = fibonacci (n - 1) + fibonacci (n - 2)"
+    },
+    {
+      "id": "quicksort",
+      "tags": ["sort"],
+      "code": "quicksort :: Ord a => [a] -> [a]\nquicksort []     = []\nquicksort (x:xs) =\n  let smaller = quicksort [y | y <- xs, y < x]\n      larger  = quicksort [y | y <- xs, y >= x]\n  in smaller ++ [x] ++ larger"
+    },
+    {
+      "id": "print-range",
+      "tags": ["basics"],
+      "code": "main :: IO ()\nmain = mapM_ print [1 .. 10]"
+    }
+  ]
+}

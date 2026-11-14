@@ -1,0 +1,35 @@
+{
+  "id": "python",
+  "snippets": [
+    {
+      "id": "quicksort",
+      "tags": ["sort"],
+      "code": "def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) + middle + quicksort(right)"
+    },
+    {
+      "id": "fib",
+      "tags": ["generator"],
+      "code": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b\n\nprint(list(fibonacci(10)))"
+    },
+    {
+      "id": "stack",
+      "tags": ["oop"],
+      "code": "class Stack:\n    def __init__(self):\n        self.items = []\n\n    def push(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop()"
+    },
+    {
+      "id": "dataclass",
+      "tags": ["oop"],
+      "code": "from dataclasses import dataclass\n\n@dataclass\nclass Point:\n    x: float\n    y: float\n\n    def dist(self, other):\n        return ((self.x - other.x) ** 2 + (self.y - other.y) ** 2) ** 0.5"
+    },
+    {
+      "id": "async",
+      "tags": ["async"],
+      "code": "import asyncio\n\nasync def fetch(url):\n    await asyncio.sleep(1)\n    return f'data from {url}'\n\nasyncio.run(fetch('https://example.com'))"
+    },
+    {
+      "id": "comp",
+      "tags": ["comprehension"],
+      "code": "squares = [x**2 for x in range(10) if x % 2 == 0]\nprint(squares)"
+    }
+  ]
+}

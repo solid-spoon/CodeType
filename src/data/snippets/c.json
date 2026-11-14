@@ -1,0 +1,15 @@
+{
+  "id": "c",
+  "snippets": [
+    {
+      "id": "loop",
+      "tags": ["basics"],
+      "code": "#include <stdio.h>\n\nint main(void) {\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}"
+    },
+    {
+      "id": "linked-list",
+      "tags": ["pointers", "structs"],
+      "code": "struct Node {\n    int value;\n    struct Node *next;\n};\n\nvoid push(struct Node **head, int v) {\n    struct Node *n = malloc(sizeof(*n));\n    n->value = v;\n    n->next = *head;\n    *head = n;\n}"
+    }
+  ]
+}

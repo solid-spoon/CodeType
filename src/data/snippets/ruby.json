@@ -1,0 +1,15 @@
+{
+  "id": "ruby",
+  "snippets": [
+    {
+      "id": "greeter",
+      "tags": ["oop"],
+      "code": "class Greeter\n  def initialize(name)\n    @name = name\n  end\n\n  def greet\n    puts \"Hello, #{@name}!\"\n  end\nend\n\nGreeter.new(\"World\").greet"
+    },
+    {
+      "id": "select-even",
+      "tags": ["collections"],
+      "code": "numbers = [1, 2, 3, 4, 5]\nputs numbers.select(&:even?).map { |n| n * 10 }"
+    }
+  ]
+}

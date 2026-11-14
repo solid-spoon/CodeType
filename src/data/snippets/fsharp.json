@@ -1,0 +1,15 @@
+{
+  "id": "fsharp",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "let rec fib n =\n    if n < 2 then n\n    else fib (n - 1) + fib (n - 2)\n\n[1 .. 10] |> List.map fib |> List.iter (printfn \"%d\")"
+    },
+    {
+      "id": "list-map",
+      "tags": ["list"],
+      "code": "let numbers = [1; 2; 3; 4; 5]\nlet doubled = numbers |> List.map (fun n -> n * 2)\nprintfn \"%A\" doubled"
+    }
+  ]
+}

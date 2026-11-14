@@ -1,0 +1,10 @@
+{
+  "id": "fortran",
+  "snippets": [
+    {
+      "id": "hello-loop",
+      "tags": ["basics"],
+      "code": "program hello\n    implicit none\n    integer :: i\n    do i = 1, 5\n        print *, 'i =', i\n    end do\nend program hello"
+    }
+  ]
+}

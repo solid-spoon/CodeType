@@ -1,0 +1,20 @@
+{
+  "id": "typescript",
+  "snippets": [
+    {
+      "id": "interface",
+      "tags": ["types"],
+      "code": "interface User {\n  id: number;\n  name: string;\n  email?: string;\n}\n\nfunction greet(user: User): string {\n  return `Hello, ${user.name}!`;\n}"
+    },
+    {
+      "id": "result",
+      "tags": ["types", "generics"],
+      "code": "type Result<T> =\n  | { ok: true; value: T }\n  | { ok: false; error: string };\n\nfunction safeDiv(a: number, b: number): Result<number> {\n  if (b === 0) return { ok: false, error: 'division by zero' };\n  return { ok: true, value: a / b };\n}"
+    },
+    {
+      "id": "generic-identity",
+      "tags": ["generics"],
+      "code": "const identity = <T,>(x: T): T => x;\nconst n = identity<number>(42);\nconst s = identity('hi');"
+    }
+  ]
+}

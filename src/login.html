@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeType — sign in</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23181818'/><text x='32' y='50' font-family='monospace' font-size='54' font-weight='bold' fill='%23e2b714' text-anchor='middle' dominant-baseline='central'>c</text><text x='68' y='50' font-family='monospace' font-size='54' font-weight='bold' fill='%23e6e6e6' text-anchor='middle' dominant-baseline='central'>t</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <div class="logo">code<span>type</span></div>
+      <p class="sub">enter a nickname to start racing</p>
+
+      <div id="session" class="session hidden">
+        <p>signed in as <b id="session-name">—</b></p>
+        <a class="btn btn-primary" href="trainer.html">continue →</a>
+        <button class="btn btn-ghost" id="switch" type="button">
+          switch account
+        </button>
+      </div>
+
+      <form id="form" autocomplete="off">
+        <input
+          id="name"
+          type="text"
+          maxlength="20"
+          placeholder="nickname"
+          spellcheck="false"
+          autofocus
+        />
+        <button class="btn btn-primary" type="submit">start typing →</button>
+      </form>
+
+      <p class="err" id="err"></p>
+      <p class="hint">
+        no password · everything is stored locally in your browser
+      </p>
+    </div>
+    <script type="module" src="js/pages/login.js"></script>
+  </body>
+</html>

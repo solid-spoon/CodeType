@@ -1,0 +1,15 @@
+{
+  "id": "groovy",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "def fib(n) {\n    n < 2 ? n : fib(n - 1) + fib(n - 2)\n}\n\n(1..10).each { println fib(it) }"
+    },
+    {
+      "id": "collect-double",
+      "tags": ["collections"],
+      "code": "def nums = [1, 2, 3, 4, 5]\ndef doubled = nums.collect { it * 2 }\nprintln doubled"
+    }
+  ]
+}

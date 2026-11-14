@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeType — profile</title>
+    <script>
+      try {
+        if (!localStorage.getItem("codetype_user"))
+          location.replace("login.html");
+        else localStorage.setItem("codetype_last_page", "profile.html");
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23181818'/><text x='32' y='50' font-family='monospace' font-size='54' font-weight='bold' fill='%23e2b714' text-anchor='middle' dominant-baseline='central'>c</text><text x='68' y='50' font-family='monospace' font-size='54' font-weight='bold' fill='%23e6e6e6' text-anchor='middle' dominant-baseline='central'>t</text></svg>"
+    />
+  </head>
+  <body>
+    <main class="app">
+      <codetype-header mode="profile"></codetype-header>
+
+      <div class="dashboard">
+        <section class="hero">
+          <div class="avatar-wrap"><div class="avatar" id="avatar">?</div></div>
+          <div class="hero-main">
+            <h1 id="user-name">—</h1>
+            <p class="hero-meta">
+              <span id="user-since">joined —</span>
+              <span class="dot">·</span>
+              <span id="user-rank">unranked</span>
+            </p>
+            <div class="badges" id="badges"></div>
+          </div>
+          <div class="hero-actions">
+            <button class="btn btn-ghost" id="share">↗ share</button>
+            <button class="btn btn-ghost" id="rename">✎ rename</button>
+            <a class="btn btn-primary" href="trainer.html">new race →</a>
+          </div>
+        </section>
+
+        <section class="stats-feature">
+          <div class="tile tile-feature fade-in">
+            <span class="label">personal best</span>
+            <div class="value" id="feature-value">— <small>wpm</small></div>
+            <canvas id="spark-best"></canvas>
+          </div>
+          <div class="tile-grid" id="stat-grid"></div>
+        </section>
+
+        <div class="grid-2 charts">
+          <section class="card fade-in" style="animation-delay: 40ms">
+            <div class="card-head">
+              <h2>wpm · last 30 races</h2>
+              <span class="card-meta" id="wpm-trend"></span>
+            </div>
+            <div class="chart-wrap" id="wpm-wrap">
+              <canvas id="chart-wpm" class="chart"></canvas>
+            </div>
+          </section>
+          <section class="card fade-in" style="animation-delay: 80ms">
+            <div class="card-head"><h2>accuracy · last 30 races</h2></div>
+            <div class="chart-wrap" id="acc-wrap">
+              <canvas id="chart-acc" class="chart"></canvas>
+            </div>
+          </section>
+        </div>
+
+        <div class="grid-2">
+          <div class="col-left">
+            <section class="card fade-in" style="animation-delay: 120ms">
+              <div class="card-head">
+                <h2>recent races</h2>
+                <span class="card-meta">last 20</span>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>date</th>
+                      <th>language</th>
+                      <th style="text-align: right">wpm</th>
+                      <th style="text-align: right">acc</th>
+                      <th style="text-align: right">time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="history"></tbody>
+                </table>
+              </div>
+            </section>
+            <section class="card fade-in" style="animation-delay: 200ms">
+              <h2>by language</h2>
+              <div id="lang-breakdown"></div>
+            </section>
+          </div>
+
+          <div class="col-right">
+            <section class="card fade-in" style="animation-delay: 160ms">
+              <div class="card-head">
+                <h2>leaderboard · top 10</h2>
+                <span id="my-rank-callout"></span>
+              </div>
+              <ol id="lb-list"></ol>
+            </section>
+            <section
+              class="card fade-in data-footer"
+              style="animation-delay: 240ms"
+            >
+              <h2>data management</h2>
+              <div class="actions">
+                <button class="btn btn-ghost" id="export">↓ export json</button>
+                <button class="btn btn-ghost" id="import">↑ import json</button>
+                <button class="btn btn-ghost danger" id="clear">
+                  ✕ clear my results
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="js/pages/profile.js"></script>
+  </body>
+</html>

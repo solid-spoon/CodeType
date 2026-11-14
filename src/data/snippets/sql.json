@@ -1,0 +1,15 @@
+{
+  "id": "sql",
+  "snippets": [
+    {
+      "id": "group-join",
+      "tags": ["query", "join"],
+      "code": "SELECT u.id, u.name, COUNT(o.id) AS order_count\nFROM users u\nLEFT JOIN orders o ON o.user_id = u.id\nWHERE u.created_at >= '2024-01-01'\nGROUP BY u.id, u.name\nHAVING COUNT(o.id) > 3\nORDER BY order_count DESC;"
+    },
+    {
+      "id": "create-table",
+      "tags": ["ddl"],
+      "code": "CREATE TABLE users (\n    id         SERIAL PRIMARY KEY,\n    name       VARCHAR(100) NOT NULL,\n    email      VARCHAR(255) UNIQUE,\n    created_at TIMESTAMP DEFAULT NOW()\n);"
+    }
+  ]
+}

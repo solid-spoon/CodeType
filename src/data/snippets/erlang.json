@@ -1,0 +1,15 @@
+{
+  "id": "erlang",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "-module(fib).\n-export([fib/1]).\n\nfib(0) -> 0;\nfib(1) -> 1;\nfib(N) -> fib(N - 1) + fib(N - 2)."
+    },
+    {
+      "id": "greet",
+      "tags": ["basics"],
+      "code": "-module(greet).\n-export([hello/1]).\n\nhello(Name) ->\n    io:format(\"Hello, ~s!~n\", [Name])."
+    }
+  ]
+}

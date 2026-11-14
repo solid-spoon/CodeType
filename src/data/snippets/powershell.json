@@ -1,0 +1,15 @@
+{
+  "id": "powershell",
+  "snippets": [
+    {
+      "id": "fib-rec",
+      "tags": ["recursion"],
+      "code": "function Get-Fibonacci($n) {\n    if ($n -lt 2) { return $n }\n    return (Get-Fibonacci ($n - 1)) + (Get-Fibonacci ($n - 2))\n}\n\n1..10 | ForEach-Object { Get-Fibonacci $_ }"
+    },
+    {
+      "id": "filter-files",
+      "tags": ["pipeline"],
+      "code": "Get-ChildItem -Path . -Filter *.ps1 |\n    Where-Object { $_.Length -gt 1024 } |\n    Select-Object Name, Length"
+    }
+  ]
+}
